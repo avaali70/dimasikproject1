@@ -103,7 +103,7 @@ async def handle_ws_client(websocket, path):
             try:
                 message = await websocket.recv()
                 data = json.loads(message)
-                print(f"Received WebSocket message: {data}")  # Для отладки
+                #print(f"Received WebSocket message: {data}")  # Для отладки
                 action = data.get("action")
                 if action == "create_channel":
                     channel_name = data.get("name")
