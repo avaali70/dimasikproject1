@@ -1,0 +1,4 @@
+echo "__pycache__/" > .gitignore
+echo "*.pyc" >> .gitignore
+echo "auth.json" >> .gitignore
+echo "voice_channels.db" >> .gitignore
