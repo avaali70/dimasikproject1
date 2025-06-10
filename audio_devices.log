@@ -665,3 +665,283 @@
 2025-06-10 13:24:41,898 - DEBUG - % sent keepalive ping
 2025-06-10 13:24:41,986 - DEBUG - < PONG 9e b9 3a 08 [binary, 4 bytes]
 2025-06-10 13:24:41,986 - DEBUG - % received keepalive pong
+2025-06-10 13:25:41,871 - DEBUG - Using proactor: IocpProactor
+2025-06-10 13:25:41,871 - DEBUG - Using proactor: IocpProactor
+2025-06-10 13:25:41,972 - DEBUG - Using proactor: IocpProactor
+2025-06-10 13:25:42,004 - DEBUG - = connection is CONNECTING
+2025-06-10 13:25:42,004 - DEBUG - > GET / HTTP/1.1
+2025-06-10 13:25:42,004 - DEBUG - > Host: 158.255.6.80:23345
+2025-06-10 13:25:42,004 - DEBUG - > Upgrade: websocket
+2025-06-10 13:25:42,004 - DEBUG - > Connection: Upgrade
+2025-06-10 13:25:42,004 - DEBUG - > Sec-WebSocket-Key: Geu3aAPLpMVF4JT5xahoqQ==
+2025-06-10 13:25:42,004 - DEBUG - > Sec-WebSocket-Version: 13
+2025-06-10 13:25:42,005 - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-06-10 13:25:42,005 - DEBUG - > User-Agent: Python/3.10 websockets/15.0.1
+2025-06-10 13:25:42,183 - DEBUG - < HTTP/1.1 101 Switching Protocols
+2025-06-10 13:25:42,183 - DEBUG - < Upgrade: websocket
+2025-06-10 13:25:42,183 - DEBUG - < Connection: Upgrade
+2025-06-10 13:25:42,183 - DEBUG - < Sec-WebSocket-Accept: 8eh6BLRqCeGFL58HxZE0+EborKc=
+2025-06-10 13:25:42,183 - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-06-10 13:25:42,183 - DEBUG - < Date: Tue, 10 Jun 2025 10:25:42 GMT
+2025-06-10 13:25:42,183 - DEBUG - < Server: Python/3.8 websockets/13.1
+2025-06-10 13:25:42,183 - DEBUG - = connection is OPEN
+2025-06-10 13:25:42,183 - DEBUG - > TEXT '{"action": "verify_token", "login": "avaali", "...68f47f319ca3c778dfdd6"}' [130 bytes]
+2025-06-10 13:25:42,400 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:42,404 - DEBUG - < TEXT '{"status": "success", "login": "avaali", "avata...F4cuTHOp0Xls6EB4AAA=="}' [81707 bytes]
+2025-06-10 13:25:42,414 - DEBUG - = connection is CONNECTING
+2025-06-10 13:25:42,414 - DEBUG - > GET / HTTP/1.1
+2025-06-10 13:25:42,414 - DEBUG - > Host: 158.255.6.80:23345
+2025-06-10 13:25:42,415 - DEBUG - > Upgrade: websocket
+2025-06-10 13:25:42,415 - DEBUG - > Connection: Upgrade
+2025-06-10 13:25:42,415 - DEBUG - > Sec-WebSocket-Key: vzqHtI+TArgiZYdBrkHASQ==
+2025-06-10 13:25:42,415 - DEBUG - > Sec-WebSocket-Version: 13
+2025-06-10 13:25:42,415 - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-06-10 13:25:42,415 - DEBUG - > User-Agent: Python/3.10 websockets/15.0.1
+2025-06-10 13:25:42,586 - DEBUG - < HTTP/1.1 101 Switching Protocols
+2025-06-10 13:25:42,586 - DEBUG - < Upgrade: websocket
+2025-06-10 13:25:42,586 - DEBUG - < Connection: Upgrade
+2025-06-10 13:25:42,586 - DEBUG - < Sec-WebSocket-Accept: FZWf0AoTINJ1ZCRbIFlkm0X8S28=
+2025-06-10 13:25:42,586 - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-06-10 13:25:42,586 - DEBUG - < Date: Tue, 10 Jun 2025 10:25:42 GMT
+2025-06-10 13:25:42,586 - DEBUG - < Server: Python/3.8 websockets/13.1
+2025-06-10 13:25:42,586 - DEBUG - = connection is OPEN
+2025-06-10 13:25:42,946 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:43,406 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:43,858 - DEBUG - Device index: 0, Raw name: 'Microsoft Sound Mapper - Input', Decoded name: Microsoft Sound Mapper - Input
+2025-06-10 13:25:43,932 - DEBUG - Device index: 1, Raw name: 'Microphone (Fifine Microphone)', Decoded name: Microphone (Fifine Microphone)
+2025-06-10 13:25:43,958 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:43,996 - DEBUG - Device index: 2, Raw name: 'Microsoft Sound Mapper - Output', Decoded name: Microsoft Sound Mapper - Output
+2025-06-10 13:25:44,020 - DEBUG - Device index: 3, Raw name: 'Динамики (Realtek(R) Audio)', Decoded name: \ufffd (Realtek(R) Audio)
+2025-06-10 13:25:44,030 - DEBUG - Device index: 4, Raw name: 'P27FBB-RG (NVIDIA High Definiti', Decoded name: P27FBB-RG (NVIDIA High Definiti
+2025-06-10 13:25:44,051 - DEBUG - Device index: 5, Raw name: 'Динамики (Voice Changer Virtual', Decoded name: \ufffd (Voice Changer Virtual
+2025-06-10 13:25:44,064 - DEBUG - Device index: 6, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:25:44,109 - DEBUG - Device index: 7, Raw name: 'PL2730H (NVIDIA High Definition', Decoded name: PL2730H (NVIDIA High Definition
+2025-06-10 13:25:44,136 - DEBUG - Device index: 8, Raw name: 'Первичный драйвер записи звука', Decoded name: \ufffd \ufffd\ufffd \ufffd\ufffd \ufffd\ufffd
+2025-06-10 13:25:44,188 - DEBUG - Device index: 9, Raw name: 'Microphone (Fifine Microphone)', Decoded name: Microphone (Fifine Microphone)
+2025-06-10 13:25:44,251 - DEBUG - Device index: 10, Raw name: 'Первичный звуковой драйвер', Decoded name: \ufffd \ufffd \ufffd\ufffd
+2025-06-10 13:25:44,273 - DEBUG - Device index: 11, Raw name: 'Динамики (Realtek(R) Audio)', Decoded name: \ufffd (Realtek(R) Audio)
+2025-06-10 13:25:44,290 - DEBUG - Device index: 12, Raw name: 'P27FBB-RG (NVIDIA High Definition Audio)', Decoded name: P27FBB-RG (NVIDIA High Definition Audio)
+2025-06-10 13:25:44,323 - DEBUG - Device index: 13, Raw name: 'Динамики (Voice Changer Virtual Audio Device (WDM))', Decoded name: \ufffd (Voice Changer Virtual Audio Device (WDM))
+2025-06-10 13:25:44,339 - DEBUG - Device index: 14, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:25:44,389 - DEBUG - Device index: 15, Raw name: 'PL2730H (NVIDIA High Definition Audio)', Decoded name: PL2730H (NVIDIA High Definition Audio)
+2025-06-10 13:25:44,413 - DEBUG - Device index: 16, Raw name: 'P27FBB-RG (NVIDIA High Definition Audio)', Decoded name: P27FBB-RG (NVIDIA High Definition Audio)
+2025-06-10 13:25:44,414 - DEBUG - Device index: 16 is not accessible, skipping
+2025-06-10 13:25:44,414 - DEBUG - Device index: 17, Raw name: 'Динамики (Voice Changer Virtual Audio Device (WDM))', Decoded name: \ufffd (Voice Changer Virtual Audio Device (WDM))
+2025-06-10 13:25:44,415 - DEBUG - Device index: 17 is not accessible, skipping
+2025-06-10 13:25:44,415 - DEBUG - Device index: 18, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:25:44,416 - DEBUG - Device index: 18 is not accessible, skipping
+2025-06-10 13:25:44,416 - DEBUG - Device index: 19, Raw name: 'Динамики (Realtek(R) Audio)', Decoded name: \ufffd (Realtek(R) Audio)
+2025-06-10 13:25:44,418 - DEBUG - Device index: 19 is not accessible, skipping
+2025-06-10 13:25:44,418 - DEBUG - Device index: 20, Raw name: 'PL2730H (NVIDIA High Definition Audio)', Decoded name: PL2730H (NVIDIA High Definition Audio)
+2025-06-10 13:25:44,419 - DEBUG - Device index: 20 is not accessible, skipping
+2025-06-10 13:25:44,419 - DEBUG - Device index: 21, Raw name: 'Microphone (Fifine Microphone)', Decoded name: Microphone (Fifine Microphone)
+2025-06-10 13:25:44,420 - DEBUG - Device index: 21 is not accessible, skipping
+2025-06-10 13:25:44,420 - DEBUG - Device index: 22, Raw name: 'Output (NVIDIA High Definition Audio)', Decoded name: Output (NVIDIA High Definition Audio)
+2025-06-10 13:25:44,420 - DEBUG - Device index: 22 is not accessible, skipping
+2025-06-10 13:25:44,420 - DEBUG - Device index: 23, Raw name: 'Output (NVIDIA High Definition Audio)', Decoded name: Output (NVIDIA High Definition Audio)
+2025-06-10 13:25:44,420 - DEBUG - Device index: 23 is not accessible, skipping
+2025-06-10 13:25:44,420 - DEBUG - Device index: 24, Raw name: 'Output (NVIDIA High Definition Audio)', Decoded name: Output (NVIDIA High Definition Audio)
+2025-06-10 13:25:44,420 - DEBUG - Device index: 24 is not accessible, skipping
+2025-06-10 13:25:44,420 - DEBUG - Device index: 25, Raw name: 'Speakers (Realtek HD Audio output)', Decoded name: Speakers (Realtek HD Audio output)
+2025-06-10 13:25:44,421 - DEBUG - Device index: 25 is not accessible, skipping
+2025-06-10 13:25:44,421 - DEBUG - Device index: 26, Raw name: 'Микрофон (Realtek HD Audio Mic input)', Decoded name:  (Realtek HD Audio Mic input)
+2025-06-10 13:25:44,421 - DEBUG - Device index: 26 is not accessible, skipping
+2025-06-10 13:25:44,421 - DEBUG - Device index: 27, Raw name: 'Headphones (Realtek HD Audio 2nd output)', Decoded name: Headphones (Realtek HD Audio 2nd output)
+2025-06-10 13:25:44,421 - DEBUG - Device index: 27 is not accessible, skipping
+2025-06-10 13:25:44,421 - DEBUG - Device index: 28, Raw name: 'Стерео микшер (Realtek HD Audio Stereo input)', Decoded name: \ufffd\ufffd \ufffd (Realtek HD Audio Stereo input)
+2025-06-10 13:25:44,421 - DEBUG - Device index: 28 is not accessible, skipping
+2025-06-10 13:25:44,421 - DEBUG - Device index: 29, Raw name: 'Лин. вход (Realtek HD Audio Line input)', Decoded name: .  (Realtek HD Audio Line input)
+2025-06-10 13:25:44,421 - DEBUG - Device index: 29 is not accessible, skipping
+2025-06-10 13:25:44,422 - DEBUG - Device index: 30, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:25:44,422 - DEBUG - Device index: 30 is not accessible, skipping
+2025-06-10 13:25:44,422 - DEBUG - Device index: 31, Raw name: 'Микрофон (USB Audio Device)', Decoded name:  (USB Audio Device)
+2025-06-10 13:25:44,422 - DEBUG - Device index: 31 is not accessible, skipping
+2025-06-10 13:25:44,422 - DEBUG - Device index: 32, Raw name: 'Микрофон (MFDriver Virtual Audio)', Decoded name:  (MFDriver Virtual Audio)
+2025-06-10 13:25:44,422 - DEBUG - Device index: 32 is not accessible, skipping
+2025-06-10 13:25:44,422 - DEBUG - Device index: 33, Raw name: 'Speakers (MFDriver Virtual Audio)', Decoded name: Speakers (MFDriver Virtual Audio)
+2025-06-10 13:25:44,422 - DEBUG - Device index: 33 is not accessible, skipping
+2025-06-10 13:25:44,422 - DEBUG - Device index: 34, Raw name: 'Microphone (Camo)', Decoded name: Microphone (Camo)
+2025-06-10 13:25:44,423 - DEBUG - Device index: 34 is not accessible, skipping
+2025-06-10 13:25:44,423 - DEBUG - Device index: 35, Raw name: 'Микрофон (Fifine Microphone)', Decoded name:  (Fifine Microphone)
+2025-06-10 13:25:44,423 - DEBUG - Device index: 35 is not accessible, skipping
+2025-06-10 13:25:44,556 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:45,070 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:45,666 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:46,205 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:46,737 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:47,249 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:47,826 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:48,384 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:48,943 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:49,463 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:50,047 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:50,591 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:51,091 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:51,649 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:52,192 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:52,736 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:53,310 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:25:53,839 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:26:02,587 - DEBUG - < PING fc 91 c2 e9 [binary, 4 bytes]
+2025-06-10 13:26:02,588 - DEBUG - > PONG fc 91 c2 e9 [binary, 4 bytes]
+2025-06-10 13:26:02,588 - DEBUG - > PING b9 9a 0f 97 [binary, 4 bytes]
+2025-06-10 13:26:02,588 - DEBUG - % sent keepalive ping
+2025-06-10 13:26:02,673 - DEBUG - < PONG b9 9a 0f 97 [binary, 4 bytes]
+2025-06-10 13:26:02,673 - DEBUG - % received keepalive pong
+2025-06-10 13:26:22,607 - DEBUG - > PING a7 17 87 e4 [binary, 4 bytes]
+2025-06-10 13:26:22,607 - DEBUG - % sent keepalive ping
+2025-06-10 13:26:22,698 - DEBUG - < PONG a7 17 87 e4 [binary, 4 bytes]
+2025-06-10 13:26:22,698 - DEBUG - % received keepalive pong
+2025-06-10 13:26:22,743 - DEBUG - < PING 'XC\x1e\x0c' [text, 4 bytes]
+2025-06-10 13:26:22,743 - DEBUG - > PONG 'XC\x1e\x0c' [text, 4 bytes]
+2025-06-10 13:26:42,608 - DEBUG - > PING f7 f2 1c 84 [binary, 4 bytes]
+2025-06-10 13:26:42,608 - DEBUG - % sent keepalive ping
+2025-06-10 13:26:42,695 - DEBUG - < PONG f7 f2 1c 84 [binary, 4 bytes]
+2025-06-10 13:26:42,695 - DEBUG - % received keepalive pong
+2025-06-10 13:26:42,831 - DEBUG - < PING 5c d5 cd ac [binary, 4 bytes]
+2025-06-10 13:26:42,831 - DEBUG - > PONG 5c d5 cd ac [binary, 4 bytes]
+2025-06-10 13:27:28,997 - DEBUG - Using proactor: IocpProactor
+2025-06-10 13:27:28,997 - DEBUG - Using proactor: IocpProactor
+2025-06-10 13:27:29,091 - DEBUG - Using proactor: IocpProactor
+2025-06-10 13:27:29,124 - DEBUG - = connection is CONNECTING
+2025-06-10 13:27:29,124 - DEBUG - > GET / HTTP/1.1
+2025-06-10 13:27:29,124 - DEBUG - > Host: 158.255.6.80:23345
+2025-06-10 13:27:29,124 - DEBUG - > Upgrade: websocket
+2025-06-10 13:27:29,124 - DEBUG - > Connection: Upgrade
+2025-06-10 13:27:29,124 - DEBUG - > Sec-WebSocket-Key: SJI8Uo64fENvSwElJEBkwg==
+2025-06-10 13:27:29,124 - DEBUG - > Sec-WebSocket-Version: 13
+2025-06-10 13:27:29,124 - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-06-10 13:27:29,124 - DEBUG - > User-Agent: Python/3.10 websockets/15.0.1
+2025-06-10 13:27:29,309 - DEBUG - < HTTP/1.1 101 Switching Protocols
+2025-06-10 13:27:29,309 - DEBUG - < Upgrade: websocket
+2025-06-10 13:27:29,309 - DEBUG - < Connection: Upgrade
+2025-06-10 13:27:29,310 - DEBUG - < Sec-WebSocket-Accept: RSox8/d1v4sCMhl/y9HFWpoFYcU=
+2025-06-10 13:27:29,310 - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-06-10 13:27:29,310 - DEBUG - < Date: Tue, 10 Jun 2025 10:27:29 GMT
+2025-06-10 13:27:29,310 - DEBUG - < Server: Python/3.8 websockets/13.1
+2025-06-10 13:27:29,310 - DEBUG - = connection is OPEN
+2025-06-10 13:27:29,310 - DEBUG - > TEXT '{"action": "verify_token", "login": "avaali", "...68f47f319ca3c778dfdd6"}' [130 bytes]
+2025-06-10 13:27:29,501 - DEBUG - < TEXT '{"status": "success", "login": "avaali", "avata...F4cuTHOp0Xls6EB4AAA=="}' [81707 bytes]
+2025-06-10 13:27:29,511 - DEBUG - = connection is CONNECTING
+2025-06-10 13:27:29,511 - DEBUG - > GET / HTTP/1.1
+2025-06-10 13:27:29,511 - DEBUG - > Host: 158.255.6.80:23345
+2025-06-10 13:27:29,511 - DEBUG - > Upgrade: websocket
+2025-06-10 13:27:29,511 - DEBUG - > Connection: Upgrade
+2025-06-10 13:27:29,511 - DEBUG - > Sec-WebSocket-Key: l6xn09El9j2pktxWlRzAEQ==
+2025-06-10 13:27:29,511 - DEBUG - > Sec-WebSocket-Version: 13
+2025-06-10 13:27:29,511 - DEBUG - > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2025-06-10 13:27:29,511 - DEBUG - > User-Agent: Python/3.10 websockets/15.0.1
+2025-06-10 13:27:29,688 - DEBUG - < HTTP/1.1 101 Switching Protocols
+2025-06-10 13:27:29,688 - DEBUG - < Upgrade: websocket
+2025-06-10 13:27:29,688 - DEBUG - < Connection: Upgrade
+2025-06-10 13:27:29,688 - DEBUG - < Sec-WebSocket-Accept: 4R+RNn56UnDDqNVydCOUWrI07IU=
+2025-06-10 13:27:29,688 - DEBUG - < Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2025-06-10 13:27:29,688 - DEBUG - < Date: Tue, 10 Jun 2025 10:27:29 GMT
+2025-06-10 13:27:29,688 - DEBUG - < Server: Python/3.8 websockets/13.1
+2025-06-10 13:27:29,688 - DEBUG - = connection is OPEN
+2025-06-10 13:27:30,289 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:30,730 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:31,313 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:31,842 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:32,331 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:32,947 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:33,513 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:33,689 - DEBUG - Device index: 0, Raw name: 'Microsoft Sound Mapper - Input', Decoded name: Microsoft Sound Mapper - Input
+2025-06-10 13:27:33,756 - DEBUG - Device index: 1, Raw name: 'Microphone (Fifine Microphone)', Decoded name: Microphone (Fifine Microphone)
+2025-06-10 13:27:33,820 - DEBUG - Device index: 2, Raw name: 'Microsoft Sound Mapper - Output', Decoded name: Microsoft Sound Mapper - Output
+2025-06-10 13:27:33,840 - DEBUG - Device index: 3, Raw name: 'Динамики (Realtek(R) Audio)', Decoded name: \ufffd (Realtek(R) Audio)
+2025-06-10 13:27:33,859 - DEBUG - Device index: 4, Raw name: 'P27FBB-RG (NVIDIA High Definiti', Decoded name: P27FBB-RG (NVIDIA High Definiti
+2025-06-10 13:27:33,889 - DEBUG - Device index: 5, Raw name: 'Динамики (Voice Changer Virtual', Decoded name: \ufffd (Voice Changer Virtual
+2025-06-10 13:27:33,904 - DEBUG - Device index: 6, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:27:33,952 - DEBUG - Device index: 7, Raw name: 'PL2730H (NVIDIA High Definition', Decoded name: PL2730H (NVIDIA High Definition
+2025-06-10 13:27:33,974 - DEBUG - Device index: 8, Raw name: 'Первичный драйвер записи звука', Decoded name: \ufffd \ufffd\ufffd \ufffd\ufffd \ufffd\ufffd
+2025-06-10 13:27:34,013 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:34,044 - DEBUG - Device index: 9, Raw name: 'Microphone (Fifine Microphone)', Decoded name: Microphone (Fifine Microphone)
+2025-06-10 13:27:34,108 - DEBUG - Device index: 10, Raw name: 'Первичный звуковой драйвер', Decoded name: \ufffd \ufffd \ufffd\ufffd
+2025-06-10 13:27:34,135 - DEBUG - Device index: 11, Raw name: 'Динамики (Realtek(R) Audio)', Decoded name: \ufffd (Realtek(R) Audio)
+2025-06-10 13:27:34,155 - DEBUG - Device index: 12, Raw name: 'P27FBB-RG (NVIDIA High Definition Audio)', Decoded name: P27FBB-RG (NVIDIA High Definition Audio)
+2025-06-10 13:27:34,181 - DEBUG - Device index: 13, Raw name: 'Динамики (Voice Changer Virtual Audio Device (WDM))', Decoded name: \ufffd (Voice Changer Virtual Audio Device (WDM))
+2025-06-10 13:27:34,200 - DEBUG - Device index: 14, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:27:34,253 - DEBUG - Device index: 15, Raw name: 'PL2730H (NVIDIA High Definition Audio)', Decoded name: PL2730H (NVIDIA High Definition Audio)
+2025-06-10 13:27:34,281 - DEBUG - Device index: 16, Raw name: 'P27FBB-RG (NVIDIA High Definition Audio)', Decoded name: P27FBB-RG (NVIDIA High Definition Audio)
+2025-06-10 13:27:34,282 - DEBUG - Device index: 16 is not accessible, skipping
+2025-06-10 13:27:34,283 - DEBUG - Device index: 17, Raw name: 'Динамики (Voice Changer Virtual Audio Device (WDM))', Decoded name: \ufffd (Voice Changer Virtual Audio Device (WDM))
+2025-06-10 13:27:34,283 - DEBUG - Device index: 17 is not accessible, skipping
+2025-06-10 13:27:34,283 - DEBUG - Device index: 18, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:27:34,284 - DEBUG - Device index: 18 is not accessible, skipping
+2025-06-10 13:27:34,284 - DEBUG - Device index: 19, Raw name: 'Динамики (Realtek(R) Audio)', Decoded name: \ufffd (Realtek(R) Audio)
+2025-06-10 13:27:34,288 - DEBUG - Device index: 19 is not accessible, skipping
+2025-06-10 13:27:34,288 - DEBUG - Device index: 20, Raw name: 'PL2730H (NVIDIA High Definition Audio)', Decoded name: PL2730H (NVIDIA High Definition Audio)
+2025-06-10 13:27:34,289 - DEBUG - Device index: 20 is not accessible, skipping
+2025-06-10 13:27:34,290 - DEBUG - Device index: 21, Raw name: 'Microphone (Fifine Microphone)', Decoded name: Microphone (Fifine Microphone)
+2025-06-10 13:27:34,290 - DEBUG - Device index: 21 is not accessible, skipping
+2025-06-10 13:27:34,290 - DEBUG - Device index: 22, Raw name: 'Output (NVIDIA High Definition Audio)', Decoded name: Output (NVIDIA High Definition Audio)
+2025-06-10 13:27:34,291 - DEBUG - Device index: 22 is not accessible, skipping
+2025-06-10 13:27:34,291 - DEBUG - Device index: 23, Raw name: 'Output (NVIDIA High Definition Audio)', Decoded name: Output (NVIDIA High Definition Audio)
+2025-06-10 13:27:34,291 - DEBUG - Device index: 23 is not accessible, skipping
+2025-06-10 13:27:34,291 - DEBUG - Device index: 24, Raw name: 'Output (NVIDIA High Definition Audio)', Decoded name: Output (NVIDIA High Definition Audio)
+2025-06-10 13:27:34,291 - DEBUG - Device index: 24 is not accessible, skipping
+2025-06-10 13:27:34,291 - DEBUG - Device index: 25, Raw name: 'Speakers (Realtek HD Audio output)', Decoded name: Speakers (Realtek HD Audio output)
+2025-06-10 13:27:34,291 - DEBUG - Device index: 25 is not accessible, skipping
+2025-06-10 13:27:34,291 - DEBUG - Device index: 26, Raw name: 'Микрофон (Realtek HD Audio Mic input)', Decoded name:  (Realtek HD Audio Mic input)
+2025-06-10 13:27:34,292 - DEBUG - Device index: 26 is not accessible, skipping
+2025-06-10 13:27:34,292 - DEBUG - Device index: 27, Raw name: 'Headphones (Realtek HD Audio 2nd output)', Decoded name: Headphones (Realtek HD Audio 2nd output)
+2025-06-10 13:27:34,293 - DEBUG - Device index: 27 is not accessible, skipping
+2025-06-10 13:27:34,293 - DEBUG - Device index: 28, Raw name: 'Стерео микшер (Realtek HD Audio Stereo input)', Decoded name: \ufffd\ufffd \ufffd (Realtek HD Audio Stereo input)
+2025-06-10 13:27:34,293 - DEBUG - Device index: 28 is not accessible, skipping
+2025-06-10 13:27:34,293 - DEBUG - Device index: 29, Raw name: 'Лин. вход (Realtek HD Audio Line input)', Decoded name: .  (Realtek HD Audio Line input)
+2025-06-10 13:27:34,293 - DEBUG - Device index: 29 is not accessible, skipping
+2025-06-10 13:27:34,293 - DEBUG - Device index: 30, Raw name: 'Динамики (USB Audio Device)', Decoded name: \ufffd (USB Audio Device)
+2025-06-10 13:27:34,293 - DEBUG - Device index: 30 is not accessible, skipping
+2025-06-10 13:27:34,293 - DEBUG - Device index: 31, Raw name: 'Микрофон (USB Audio Device)', Decoded name:  (USB Audio Device)
+2025-06-10 13:27:34,293 - DEBUG - Device index: 31 is not accessible, skipping
+2025-06-10 13:27:34,293 - DEBUG - Device index: 32, Raw name: 'Микрофон (MFDriver Virtual Audio)', Decoded name:  (MFDriver Virtual Audio)
+2025-06-10 13:27:34,294 - DEBUG - Device index: 32 is not accessible, skipping
+2025-06-10 13:27:34,294 - DEBUG - Device index: 33, Raw name: 'Speakers (MFDriver Virtual Audio)', Decoded name: Speakers (MFDriver Virtual Audio)
+2025-06-10 13:27:34,294 - DEBUG - Device index: 33 is not accessible, skipping
+2025-06-10 13:27:34,294 - DEBUG - Device index: 34, Raw name: 'Microphone (Camo)', Decoded name: Microphone (Camo)
+2025-06-10 13:27:34,294 - DEBUG - Device index: 34 is not accessible, skipping
+2025-06-10 13:27:34,294 - DEBUG - Device index: 35, Raw name: 'Микрофон (Fifine Microphone)', Decoded name:  (Fifine Microphone)
+2025-06-10 13:27:34,294 - DEBUG - Device index: 35 is not accessible, skipping
+2025-06-10 13:27:34,611 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:35,139 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:35,654 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:36,240 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:36,774 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:37,264 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:37,846 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:38,338 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:38,901 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:39,401 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:39,944 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:40,512 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:41,096 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:41,631 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:42,119 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:42,650 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:43,201 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:43,839 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:44,302 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:44,866 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:45,387 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:45,970 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:46,503 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:47,041 - DEBUG - < TEXT '{"type": "info", "payload": {"status": "Online"...t": 0, "speaking": {}}}' [163930 bytes]
+2025-06-10 13:27:49,688 - DEBUG - < PING f2 de a7 06 [binary, 4 bytes]
+2025-06-10 13:27:49,688 - DEBUG - > PONG f2 de a7 06 [binary, 4 bytes]
+2025-06-10 13:27:49,688 - DEBUG - > PING c0 c1 2d d5 [binary, 4 bytes]
+2025-06-10 13:27:49,688 - DEBUG - % sent keepalive ping
+2025-06-10 13:27:49,778 - DEBUG - < PONG c0 c1 2d d5 [binary, 4 bytes]
+2025-06-10 13:27:49,778 - DEBUG - % received keepalive pong
+2025-06-10 13:28:09,689 - DEBUG - > PING '\u021cjO' [text, 4 bytes]
+2025-06-10 13:28:09,689 - DEBUG - % sent keepalive ping
+2025-06-10 13:28:09,779 - DEBUG - < PONG '\u021cjO' [text, 4 bytes]
+2025-06-10 13:28:09,779 - DEBUG - % received keepalive pong
+2025-06-10 13:28:09,825 - DEBUG - < PING 28 2f 84 20 [binary, 4 bytes]
+2025-06-10 13:28:09,825 - DEBUG - > PONG 28 2f 84 20 [binary, 4 bytes]
+2025-06-10 13:28:29,688 - DEBUG - > PING 99 70 ed 79 [binary, 4 bytes]
+2025-06-10 13:28:29,688 - DEBUG - % sent keepalive ping
+2025-06-10 13:28:29,779 - DEBUG - < PONG 99 70 ed 79 [binary, 4 bytes]
+2025-06-10 13:28:29,779 - DEBUG - % received keepalive pong
+2025-06-10 13:28:29,917 - DEBUG - < PING df 49 67 29 [binary, 4 bytes]
+2025-06-10 13:28:29,917 - DEBUG - > PONG df 49 67 29 [binary, 4 bytes]

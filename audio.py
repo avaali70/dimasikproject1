@@ -38,6 +38,7 @@ class AudioHandler(QObject):
 
     def get_audio_devices(self):
         """Возвращает списки микрофонов и динамиков, только подключенные, с корректной кодировкой."""
+        import platform
         input_devices = []
         output_devices = []
         seen_names = set()
@@ -49,24 +50,23 @@ class AudioHandler(QObject):
                 raw_name = device_info['name']
                 
                 # Обработка кодировки
-                if is_windows:
-                    try:
-                        # Проверяем, является ли raw_name уже строкой (иногда PyAudio возвращает декодированную строку)
+                try:
+                    if is_windows:
+                        # Предполагаем, что raw_name — строка, неправильно декодированная из UTF-8 в Latin1
                         if isinstance(raw_name, str):
-                            name = raw_name
+                            # Кодируем обратно в Latin1, чтобы получить байты, затем декодируем как UTF-8
+                            name = raw_name.encode('latin1', errors='ignore').decode('utf-8', errors='replace')
                         else:
-                            # Декодируем как UTF-8
+                            # Если это байтовая строка, декодируем как UTF-8
                             name = raw_name.decode('utf-8', errors='replace')
-                    except Exception:
-                        name = raw_name  # Fallback на исходное имя
-                else:
-                    # Для Linux используем chardet
-                    detection = chardet.detect(raw_name.encode('utf-8', errors='ignore'))
-                    encoding = detection['encoding'] or 'utf-8'
-                    try:
-                        name = raw_name.encode('utf-8').decode(encoding, errors='replace')
-                    except Exception:
-                        name = raw_name
+                    else:
+                        # Для Linux предполагаем UTF-8
+                        if isinstance(raw_name, bytes):
+                            name = raw_name.decode('utf-8', errors='replace')
+                        else:
+                            name = raw_name
+                except Exception:
+                    name = str(raw_name)  # Fallback на строковое представление
                 
                 # Логируем и выводим в консоль для диагностики
                 logging.debug(f"Device index: {i}, Raw name: {repr(raw_name)}, Decoded name: {name}")
@@ -90,8 +90,8 @@ class AudioHandler(QObject):
                     logging.debug(f"Device index: {i} is not accessible, skipping")
                     continue
                 
-                # Улучшенная фильтрация дубликатов: используем имя, hostApi и каналы
-                unique_key = (name, device_info.get('hostApi', -1), device_info.get('maxInputChannels', 0), device_info.get('maxOutputChannels', 0))
+                # Фильтрация дубликатов: используем имя и hostApi, игнорируем индекс для устранения повторов
+                unique_key = (name, device_info.get('hostApi', -1))
                 if unique_key in seen_names:
                     continue
                 seen_names.add(unique_key)
