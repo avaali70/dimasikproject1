@@ -44,9 +44,9 @@ class NetworkHandler(QObject):
                         except websockets.ConnectionClosed:
                             break
             except Exception as e:
-                print(f"WebSocket handler error: {str(e)}")  # Для отладки
+                print(f"WebSocket handler error: {str(e)}")
                 self.update_status.emit("Offline")
-                self.update_info.emit({'count': 0, 'logins': [], 'channels': {}, 'speaking': {}})
+                self.update_info.emit({'count': 0, 'logins': [], 'communities': {}, 'channels': {}, 'speaking': {}})
                 self.ws = None
                 await asyncio.sleep(3)
 
@@ -60,54 +60,51 @@ class NetworkHandler(QObject):
             return str(e)
 
     async def authenticate(self, login, password):
-        for attempt in range(3):  # Пробуем 3 раза
+        for attempt in range(3):
             try:
                 if not self.ws or not hasattr(self.ws, 'open') or not self.ws.open:
                     self.ws = await websockets.connect(f"ws://{HOST}:{WS_PORT}", ping_interval=20, ping_timeout=60, close_timeout=10)
                 request = {"action": "login", "login": login, "password": password}
-                print(f"Sending login request: {request}")  # Для отладки
+                print(f"Sending login request: {request}")
                 await self.ws.send(json.dumps(request))
                 while True:
                     response = await asyncio.wait_for(self.ws.recv(), timeout=5)
                     data = json.loads(response)
-                    print(f"Auth response candidate: {data}")  # Для отладки
                     if data.get("status") in ["success", "failed"]:
                         return data
             except asyncio.TimeoutError:
-                print(f"Auth timeout (attempt {attempt + 1}/3): No valid response received")  # Для отладки
+                print(f"Auth timeout (attempt {attempt + 1}/3): No valid response received")
                 if attempt < 2:
                     await asyncio.sleep(1)
                     continue
                 return {"status": "failed", "error": "Timeout waiting for auth response"}
             except Exception as e:
-                print(f"Auth error (attempt {attempt + 1}/3): {str(e)}")  # Для отладки
+                print(f"Auth error (attempt {attempt + 1}/3): {str(e)}")
                 if attempt < 2:
                     await asyncio.sleep(1)
                     continue
                 return {"status": "failed", "error": str(e)}
 
     async def verify_token(self, login, session_token):
-        for attempt in range(3):  # Пробуем 3 раза
+        for attempt in range(3):
             try:
                 if not self.ws or not hasattr(self.ws, 'open') or not self.ws.open:
                     self.ws = await websockets.connect(f"ws://{HOST}:{WS_PORT}", ping_interval=20, ping_timeout=60, close_timeout=10)
                 request = {"action": "verify_token", "login": login, "session_token": session_token}
-                print(f"Sending verify_token request: {request}")  # Для отладки
                 await self.ws.send(json.dumps(request))
                 while True:
                     response = await asyncio.wait_for(self.ws.recv(), timeout=5)
                     data = json.loads(response)
-                    #print(f"Verify token response candidate: {data}")  # Для отладки
                     if data.get("status") in ["success", "failed"]:
                         return data
             except asyncio.TimeoutError:
-                print(f"Verify token timeout (attempt {attempt + 1}/3): No valid response received")  # Для отладки
+                print(f"Verify token timeout (attempt {attempt + 1}/3): No valid response received")
                 if attempt < 2:
                     await asyncio.sleep(1)
                     continue
                 return {"status": "failed", "error": "Timeout waiting for verify_token response"}
             except Exception as e:
-                print(f"Verify token error (attempt {attempt + 1}/3): {str(e)}")  # Для отладки
+                print(f"Verify token error (attempt {attempt + 1}/3): {str(e)}")
                 if attempt < 2:
                     await asyncio.sleep(1)
                     continue
@@ -117,5 +114,10 @@ class NetworkHandler(QObject):
         self.running = False
         if self.ws and hasattr(self.ws, 'open') and self.ws.open:
             await self.ws.close()
-        self.loop.stop()
-        self.loop.close()
+        if self.loop and not self.loop.is_closed():
+            pending = asyncio.all_tasks(self.loop)
+            for task in pending:
+                task.cancel()
+            self.loop.run_until_complete(self.loop.shutdown_asyncgens())
+            self.loop.stop()
+            self.loop.close()

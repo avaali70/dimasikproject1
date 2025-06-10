@@ -13,51 +13,59 @@ class WindowManager:
 
     def setup_window(self):
         desktop = QDesktopWidget().screenGeometry()
-        self.window.setGeometry(desktop)
-        self.normal_geometry = desktop.adjusted(100, 100, -100, -100)
-        self.window.setWindowFlags(Qt.FramelessWindowHint)
+        self.normal_geometry = desktop.adjusted(100, 100, -100, -100)  # Устанавливаем размер с отступами
+        self.window.setGeometry(self.normal_geometry)  # Применяем нормальный режим
+        self.window.setWindowFlags(Qt.FramelessWindowHint)  # Сохраняем безрамочный режим
+        self.window.showNormal()  # Явно устанавливаем нормальный режим
 
     def setup_tray(self):
-        self.tray_icon = QSystemTrayIcon(QIcon("icon.png"), self.window)
-        tray_menu = QMenu()
-        exit_action = tray_menu.addAction("Закрыть")
-        exit_action.triggered.connect(self.window.full_exit)
-        self.tray_icon.setContextMenu(tray_menu)
-        self.tray_icon.activated.connect(self.tray_activated)
+        # Проверяем, не существует ли уже иконка в трее
+        if not hasattr(self, 'tray_icon') or not self.tray_icon:
+            self.tray_icon = QSystemTrayIcon(QIcon("icon.png"), self.window)
+            tray_menu = QMenu()
+            exit_action = tray_menu.addAction("Закрыть")
+            exit_action.triggered.connect(self.window.full_exit)
+            self.tray_icon.setContextMenu(tray_menu)
+            self.tray_icon.activated.connect(self.tray_activated)
         self.tray_icon.show()
 
     def tray_activated(self, reason):
         if reason == QSystemTrayIcon.Trigger:
-            self.window.show()
-            if self.window.isMaximized():
-                self.window.showMaximized()
+            if self.window.isVisible():
+                self.window.hide()
             else:
-                self.window.setGeometry(self.normal_geometry)
-                self.window.showNormal()
+                self.window.show()
+                if self.window.isMaximized():
+                    self.window.showMaximized()
+                else:
+                    self.window.setGeometry(self.normal_geometry)
+                    self.window.showNormal()
 
     def toggle_maximize(self):
         if self.window.isMaximized():
+            self.window.setWindowFlags(Qt.FramelessWindowHint)  # Восстанавливаем безрамочный режим
             self.window.showNormal()
             self.window.setGeometry(self.normal_geometry)
             self.window.maximize_button.setText("□")
             self.window.setMinimumSize(800, 600)
         else:
             self.normal_geometry = self.window.geometry()
+            self.window.setWindowFlags(Qt.FramelessWindowHint)  # Сохраняем безрамочный режим
             self.window.showMaximized()
             self.window.maximize_button.setText("❐")
             self.window.setMinimumSize(0, 0)
 
     def hide_to_tray(self):
         self.window.hide()
-        self.tray_icon.show()
+        # Убедимся, что иконка уже создана и видима
+        if not self.tray_icon.isVisible():
+            self.setup_tray()
 
     def mouse_press(self, event):
         if event.button() == Qt.LeftButton:
             pos = event.pos()
-            title_bar_rect = self.window.title_bar.rect()
-            title_bar_pos = self.window.title_bar.mapToParent(QPoint(0, 0))
-            title_bar_rect.moveTo(title_bar_pos)
-            if title_bar_rect.contains(pos):
+            # Проверяем верхнюю часть окна (первые 30 пикселей) или community_bar
+            if pos.y() <= 30 or self.window.community_bar.rect().contains(self.window.community_bar.mapFromParent(pos)):
                 self.is_dragging = True
                 if self.window.isMaximized():
                     desktop = QDesktopWidget().screenGeometry()
